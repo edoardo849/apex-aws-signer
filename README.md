@@ -45,6 +45,8 @@ import (
 // ctx is the *apex.Context
 ctxLogger := log.WithField("requestID", ctx.RequestID)
 transport := NewAWSSigningTransport(s, elasticsearchservice.ServiceName)
+
+// This is optional
 transport.Logger = ctxLogger
 
 httpClient := &http.Client{
