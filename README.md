@@ -44,7 +44,7 @@ import (
 // Example For ElasticSearch
 // ctx is the *apex.Context
 ctxLogger := log.WithField("requestID", ctx.RequestID)
-transport := signer.New(s, elasticsearchservice.ServiceName)
+transport := signer.NewTransport(s, elasticsearchservice.ServiceName)
 
 // This is optional
 transport.Logger = ctxLogger
@@ -61,3 +61,6 @@ client, err := elastic.NewClient(
     elastic.SetHttpClient(httpClient),
 )
 ```
+
+# Credits
+This library was partially inspired by [go-loghttp](https://github.com/motemen/go-loghttp/blob/master/loghttp.go).

@@ -12,7 +12,7 @@ import (
 )
 
 // AWSSigningTransport implements http.RoundTripper. When set as Transport of http.Client, it signs HTTP requests with the latest AWS v4 signer and logs the requests
-// No field is mandatory, but you can provide your own Transport or contextLogger by setting the Transport or Logger property. This library was inspired by https://github.com/motemen/go-loghttp/blob/master/loghttp.go
+// No field is mandatory, but you can provide your own Transport or contextLogger by setting the Transport or Logger property.
 type AWSSigningTransport struct {
 	Transport      http.RoundTripper
 	Logger         *log.Entry
