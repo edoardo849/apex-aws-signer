@@ -44,7 +44,7 @@ import (
 // Example For ElasticSearch
 // ctx is the *apex.Context
 ctxLogger := log.WithField("requestID", ctx.RequestID)
-transport := NewAWSSigningTransport(s, elasticsearchservice.ServiceName)
+transport := signer.New(s, elasticsearchservice.ServiceName)
 
 // This is optional
 transport.Logger = ctxLogger

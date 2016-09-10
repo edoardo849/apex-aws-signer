@@ -21,8 +21,8 @@ type AWSSigningTransport struct {
 	awsRegion      string
 }
 
-// NewAWSSigningTransport creates a new instance of the AWSSigningTransport
-func NewAWSSigningTransport(s *session.Session, serviceName string) *AWSSigningTransport {
+// NewTransport creates a new instance of the AWSSigningTransport
+func NewTransport(s *session.Session, serviceName string) *AWSSigningTransport {
 	return &AWSSigningTransport{
 		awsSigner:      v4.NewSigner(s.Config.Credentials),
 		awsRegion:      *s.Config.Region,

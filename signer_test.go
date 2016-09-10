@@ -21,7 +21,7 @@ func TestRoundTrip(t *testing.T) {
 	ts := httptest.NewServer(http.HandlerFunc(handler))
 	defer ts.Close()
 
-	transport := signer.NewAWSSigningTransport(session.New(&aws.Config{Region: aws.String("eu-west-1")}), "")
+	transport := signer.NewTransport(session.New(&aws.Config{Region: aws.String("eu-west-1")}), "")
 
 	client := &http.Client{
 		Transport: transport,
