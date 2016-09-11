@@ -1,5 +1,5 @@
 # AWS Signer for Apex
-![go-version: 1.7](https://img.shields.io/badge/go--version-1.7-blue.svg)
+![go: 1.7](https://img.shields.io/badge/go-1.7-blue.svg)
 
 A roundTripper implementation for Go to sign http requests to AWS services from AWS Lambda.
 
